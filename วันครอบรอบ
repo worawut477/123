@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>สุขสันต์วันครบรอบ 2Y6M 💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Kanit', sans-serif;
+      background-color: #ffe6f0;
+      color: #d63384;
+      position: relative;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+    .anniversary-date {
+      font-size: 1.2em;
+      color: #ff69b4;
+    }
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+    }
+    .image-gallery img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+    }
+    .message {
+      background-color: #fff0f5;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+      margin-bottom: 30px;
+    }
+    .message h2 {
+      color: #c2185b;
+    }
+    footer {
+      font-size: 1.1em;
+      margin-top: 20px;
+    }
+    .share-buttons {
+      margin-top: 20px;
+    }
+    .share-button {
+      background-color: #ff69b4;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .share-button:hover {
+      background-color: #e91e63;
+    }
+    .heart {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      background: red;
+      transform: rotate(45deg);
+      animation: floatUp 2s ease-out forwards;
+      opacity: 0.8;
+    }
+    .heart::before,
+    .heart::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-150px) scale(1.5) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>สุขสันต์วันครบรอบ 2Y6M 💖</h1>
+      <p class="anniversary-date">วันที่ 11 สิงหาคม 2568</p>
+    </header>
+
+    <div class="image-gallery">
+      <img src="526BE149-43B6-43F1-B986-D8EDF7638238.jpeg" alt="รูปคู่1" />
+      <img src="089E41E3-4927-43B0-A901-C304DAFEB389.jpeg" alt="รูปคู่2" />
+      <img src="33C2B05A-3E5C-4E1D-A5F7-0EFD4707F8F2.jpeg" alt="รูปชายหาด" />
+    </div>
+
+    <section class="message">
+      <h2>เขาฮักเธอเด้อ ❤️</h2>
+      <p>2Y6M แล้วเนาะ</p>
+      <p>ฮักที่สุดเลย อยู่นำกันแบบนี้ไปโดนๆเลยเด้อ</p>
+    </section>
+
+    <footer>
+      <p>ด้วยรักจากเขาคนนี้ 🥰</p>
+    </footer>
+
+    <div class="share-buttons">
+      <a href="#" class="share-button" id="facebook-share">📘 แชร์บน Facebook</a>
+      <a href="#" class="share-button" id="line-share">💚 แชร์ผ่าน Line</a>
+    </div>
+  </div>
+
+  <script>
+    // หัวใจลอยขึ้นเมื่อคลิก
+    document.body.addEventListener('click', function (e) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = e.clientX + 'px';
+      heart.style.top = e.clientY + 'px';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 2000);
+    });
+
+    // แชร์ลิงก์
+    const shareUrl = window.location.href;
+    const shareText = "สุขสันต์วันครบรอบ 2Y6M 💖 เขาฮักเธอเด้อ ฮักที่สุดเลย!";
+
+    document.getElementById('facebook-share').onclick = function () {
+      window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(shareUrl), '_blank');
+      return false;
+    };
+    document.getElementById('line-share').onclick = function () {
+      window.open('https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(shareUrl) + '&text=' + encodeURIComponent(shareText), '_blank');
+      return false;
+    };
+  </script>
+</body>
+</html>
